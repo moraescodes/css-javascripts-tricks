@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Landing Page</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body>
+  <body>
+    <section>
+      <div class="brush" ></div>
+      <header>
+     
+        <nav>
+          <a href="#" class="logo">
+            <img src="./assets/logo.png" title="Logo Starbucks" />
+          </a>
+          <ul>
+            <li>
+              <a href="#" title="Access Home">Home</a>
+            </li>
+            <li><a href="#" title="Access Home">Menu</a>
+            </li>
+            <li>
+              <a href="#" title="Access What's New">What's New</a>
+            </li>
+            <li>
+              <a href="#" title="Access Contact">Contact</a>
+            </li>
+          </ul>
+
+        </nav>
+        <aside>
+          
+          <ul>
+            <li>
+              <img src="./assets/icon-location.png" alt="Icon Location"/>
+              <a href="#" title="Find a Store">
+                Find a Store
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Sign Up" class="sign">Sign Up</a>
+            </li>
+          </ul>
+        </aside>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Discover a drink<br>
+          <span>made for you.</span></h2>
+          <p>Choose your espresso, smoth or bold,<br>
+          find the drink you want now!</p>
+          <a href="#">FIND YOUR COFFEE!</a>
+        </div>
+        <div class="imgBox">
+          <img
+           src="./assets/drink-frappuccino.png"
+           alt="Drink"
+           class="starbucks" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img 
+            src="./assets/drink-frappuccino.png"
+            onclick="
+              imgSlider('drink-frappuccino');
+              changeBrushColor('hue-rotate(-30deg)')
+            "
+            title="Drink Frappuccino" />
+        </li>
+        <li>
+          <img
+          src="./assets/drink-tea.png"
+          onclick="
+           imgSlider('drink-tea')
+           changeBrushColor('hue-rotate(195deg)');
+          "
+          title="Drink Tea" />
+        </li>
+        <li>
+          <img
+          src="./assets/drink-mocha-frappuccino-tea.png"
+          onclick="
+            imgSlider('drink-mocha-frappuccino-tea');
+            changeBrushColor('hue-rotate(225deg)')
+          "
+          alt="Image Drink Mocha Frappuccino Tea "
+          title="Drink Mocha Frappuccino Tea" />
+        </li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      function imgSlider(drinkName){
+        document.querySelector('.starbucks').src = `./assets/${drinkName}.png`;
+      }
+
+      function changeBrushColor(drinkColor){
+        document.querySelector('.brush').style.filter = drinkColor;
+      }
+    </script>
+  </body>
+</body>
+</html>
