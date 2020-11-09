@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex </title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body>
+  <div class="display-border">
+    <div class="container">
+      <div class="display">
+        <div class="card">
+          <h2>bulbasaur</h2>
+          <div class="circle"></div>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png">
+          <div class="info">grass,poison</div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class='loading'> Carregando ...</div> -->
+
+  <script src="./script.js" type="text/javascript" ></script>
+  <script src="vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".display-border"), {
+    max: 2,
+    transition: true,
+    speed: 10
+  });
+  </script>
+</body>
+</html>
